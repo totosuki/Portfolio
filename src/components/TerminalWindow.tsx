@@ -1,4 +1,5 @@
 import TerminalHeader from "./TerminalHeader";
+import Tmux from "./Tmux";
 
 function TerminalWindow() {
   return (
@@ -13,6 +14,7 @@ function TerminalWindow() {
       '
     >
       <TerminalHeader />
+      <Tmux />
     </div>
   );
 }
