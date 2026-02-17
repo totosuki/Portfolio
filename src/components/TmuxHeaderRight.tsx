@@ -1,7 +1,11 @@
+import Clock from "./Clock";
+
 function TmuxHeaderRight() {
   return (
     <div>
-      <p className='text-white'>2026/02/18 01:44:30</p>
+      <p className='text-white'>
+        <Clock />
+      </p>
     </div>
   );
 }
