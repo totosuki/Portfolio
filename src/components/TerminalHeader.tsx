@@ -1,4 +1,5 @@
 import TerminalHeaderLeft from "./TerminalHeaderLeft";
+import TerminalHeaderMiddle from "./TerminalHeaderMiddle";
 import TerminalHeaderRight from "./TerminalHeaderRight";
 
 function TerminalHeader() {
@@ -11,6 +12,7 @@ function TerminalHeader() {
       '
     >
       <TerminalHeaderLeft />
+      <TerminalHeaderMiddle />
       <TerminalHeaderRight />
     </div>
   );

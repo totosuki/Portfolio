@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: 'MoralerspaceArgon';
+    src: url('./assets/fonts/MoralerspaceArgon-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MoralerspaceArgon', monospace;
+}
