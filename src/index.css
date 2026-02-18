@@ -11,3 +11,12 @@ body {
     font-family: 'MoralerspaceArgon', monospace;
     color: white;
 }
+
+@keyframes marquee {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+    animation: marquee 30s steps(30) infinite;
+}

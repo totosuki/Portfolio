@@ -8,8 +8,8 @@ import { ASCII_TITLE } from "../constants";
 
 function AsciiTitle() {
   return (
-    <div>
-      <pre className='leading-none'>{ASCII_TITLE}</pre>
+    <div className='overflow-hidden'>
+      <pre className='leading-none animate-marquee'>{ASCII_TITLE}</pre>
     </div>
   );
 }
