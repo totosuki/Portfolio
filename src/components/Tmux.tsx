@@ -8,7 +8,7 @@ function Tmux() {
 
   return (
     <div className='w-full h-[calc(100%-40px)] px-[15px] py-[10px]'>
-      <TmuxHeader />
+      <TmuxHeader activeTab={activeTab} setActiveTab={setActiveTab} />
       <TmuxBody activeTab={activeTab} setActiveTab={setActiveTab} />
     </div>
   );
