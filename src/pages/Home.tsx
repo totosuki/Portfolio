@@ -1,6 +1,6 @@
 import { FaLastfm } from "react-icons/fa";
 import { IoBrushOutline } from "react-icons/io5";
-import type { Tab, TabState } from "../types";
+import type { TabState } from "../types";
 import github from '../assets/github.svg';
 import icon from '../assets/icon.jpg';
 import x from '../assets/x.svg';
