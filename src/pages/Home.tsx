@@ -1,5 +1,6 @@
 import { FaLastfm } from "react-icons/fa";
 import { IoBrushOutline } from "react-icons/io5";
+import type { Tab, TabState } from "../types";
 import github from '../assets/github.svg';
 import icon from '../assets/icon.jpg';
 import x from '../assets/x.svg';
@@ -61,12 +62,31 @@ function Links() {
   );
 }
 
-function Home() {
+function Pages({ setActiveTab }: Pick<TabState, 'setActiveTab'>) {
   return (
-    <div className='flex flex-col px-[30px] py-[20px] gap-[30px]'>
+    <div>
+      <p className='text-4xl mb-[20px]'>Pages</p>
+      <div className='ml-[20px] flex gap-[20px]'>
+        <div
+          className='text-2xl hover:bg-white hover:text-black cursor-pointer'
+          onClick={() => setActiveTab('products')}
+        >
+          products/
+        </div>
+        <div className='text-2xl hover:bg-white hover:text-black cursor-pointer'>skills/</div>
+        <div className='text-2xl hover:bg-white hover:text-black cursor-pointer'>hobby/</div>
+      </div>
+    </div>
+  );
+}
+
+function Home({ setActiveTab }: Pick<TabState, 'setActiveTab'>) {
+  return (
+    <div className='flex flex-col px-[30px] pt-[20px] pb-[50px] gap-[30px]'>
       <AsciiTitle />
       <AboudMe />
       <Links />
+      <Pages setActiveTab={setActiveTab} />
     </div>
   );
 }
