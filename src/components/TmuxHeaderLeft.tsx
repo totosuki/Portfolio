@@ -14,7 +14,7 @@ function TmuxHeaderLeft({ activeTab, setActiveTab }: TabState) {
         className={activeTab !== 'products' ? 'text-gray-500' : ''}
         onClick={() => setActiveTab('products')}
       >
-        2:product{activeTab === 'products' ? '*' : '-'}
+        2:products{activeTab === 'products' ? '*' : '-'}
         </span>
     </div>
   );

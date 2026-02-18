@@ -25,7 +25,7 @@ function AboudMe() {
           className='w-[250px] h-[250px] rounded-full object-cover'
         />
         <div className='flex-col w-[450px]'>
-          <p className='text-2xl mb-[20px]'>Akari Enomoto</p>
+          <p className='text-2xl mb-[20px]'>totosuki</p>
           <p>
             情報工学系の大学2年生。<br/>
             中学生のころゲーム制作に憧れてプログラミングを始め、高校では機械学習・競技プログラミング・Bot開発などに取り組んだ。大学ではWebアプリ・CLIツール・セキュリティ・組み込みと、興味の向くままに幅広く手を動かしている。
