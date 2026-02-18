@@ -1,7 +1,7 @@
 function TerminalHeaderMiddle() {
   return (
     <div>
-      <p className='text-white'>totosuki@Macbook-Pro</p>
+      <p>totosuki@Macbook-Pro</p>
     </div>
   );
 }

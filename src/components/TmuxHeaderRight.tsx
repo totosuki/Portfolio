@@ -3,7 +3,7 @@ import Clock from "./Clock";
 function TmuxHeaderRight() {
   return (
     <div>
-      <p className='text-white'>
+      <p>
         <Clock />
       </p>
     </div>
