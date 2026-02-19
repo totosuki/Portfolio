@@ -13,12 +13,17 @@ export const ASCII_TITLE = `  /$$                 /$$                           
   \\___/   \\______/    \\___/   \\______/ |_______/  \\______/ |__/  \\__/|__/
 `;
 
+export type Skill = {
+  icon: IconType;
+  label: string;
+}
+
 export type ProductType = {
   name: string;
   description: string[];
   url: string;
   period: string;
-  skills: IconType[];
+  skills: Skill[];
 };
 
 export const PRODUCTS: ProductType[] = [
@@ -30,7 +35,10 @@ export const PRODUCTS: ProductType[] = [
     ],
     url: 'https://github.com/totosuki/Portfolio',
     period: '2026/02 ~ now',
-    skills: [SiReact, SiTypescript],
+    skills: [
+      { icon: SiReact, label: 'React' },
+      { icon: SiTypescript, label: 'TypeScript' }
+    ],
   },
   {
     name: 'PySight',
@@ -40,7 +48,11 @@ export const PRODUCTS: ProductType[] = [
     ],
     url: 'https://github.com/totosuki/totosuki.github.io',
     period: '2024/11 ~ now',
-    skills: [SiHtml5, SiCss3, SiJavascript],
+    skills: [
+      { icon: SiHtml5, label: 'HTML' },
+      { icon: SiCss3, label: 'CSS' },
+      { icon: SiJavascript, label: 'JavaScript' },
+    ],
   },
   {
     name: 'Matrix Stream',
@@ -50,7 +62,10 @@ export const PRODUCTS: ProductType[] = [
     ],
     url: 'https://github.com/totosuki/matrix-stream',
     period: '2025/06 ~ 2025/07',
-    skills: [SiRust, SiRaspberrypi],
+    skills: [
+      { icon: SiRust, label: 'Rust' },
+      { icon: SiRaspberrypi, label: 'Raspberry Pi' },
+    ],
   },
   {
     name: 'lchat',
@@ -60,7 +75,9 @@ export const PRODUCTS: ProductType[] = [
     ],
     url: 'https://github.com/totosuki/lchat',
     period: '2025/06 ~ 2025/07',
-    skills: [SiRust],
+    skills: [
+      { icon: SiRust, label: 'Rust' },
+    ],
   },
   {
     name: 'homehome',
@@ -70,7 +87,12 @@ export const PRODUCTS: ProductType[] = [
     ],
     url: 'https://github.com/totosuki/homehome',
     period: '2025/03 ~ 2025/04',
-    skills: [SiPython, SiDocker, SiNginx, FaAws],
+    skills: [
+      { icon: SiPython, label: 'Python' },
+      { icon: SiDocker, label: 'Docker' },
+      { icon: SiNginx, label: 'Nginx' },
+      { icon: FaAws, label: 'AWS' },
+    ],
   },
   {
     name: 'jmp',
@@ -81,7 +103,10 @@ export const PRODUCTS: ProductType[] = [
     ],
     url: 'https://github.com/totosuki/homebrew-jmp',
     period: '2024/11',
-    skills: [SiGnubash, SiHomebrew],
+    skills: [
+      { icon: SiGnubash, label: 'Bash' },
+      { icon: SiHomebrew, label: 'Homebrew' },
+    ],
   },
   {
     name: 'Arduino Player',
@@ -92,7 +117,10 @@ export const PRODUCTS: ProductType[] = [
     ],
     url: 'https://github.com/totosuki/arduino-player',
     period: '2024/10',
-    skills: [SiCplusplus, SiArduino],
+    skills: [
+      { icon: SiCplusplus, label: 'C++' },
+      { icon: SiArduino, label: 'Arduino' },
+    ],
   },
   {
     name: 'XMR Bot',
@@ -102,7 +130,9 @@ export const PRODUCTS: ProductType[] = [
     ],
     url: 'https://github.com/totosuki/xmr-bot',
     period: '2024/06 ~ 2024/10',
-    skills: [SiPython],
+    skills: [
+      { icon: SiPython, label: 'Python' },
+    ],
   },
   {
     name: 'Observer Bot',
@@ -112,7 +142,11 @@ export const PRODUCTS: ProductType[] = [
     ],
     url: 'https://github.com/totosuki/discord-bot-observer',
     period: '2023/11 ~ 2024/02',
-    skills: [SiPython, SiDocker, SiMongodb],
+    skills: [
+      { icon: SiPython, label: 'Python' },
+      { icon: SiDocker, label: 'Docker' },
+      { icon: SiMongodb, label: 'MongoDB' },
+    ],
   },
   {
     name: 'AtCoder Tester',
@@ -122,6 +156,9 @@ export const PRODUCTS: ProductType[] = [
     ],
     url: 'https://github.com/totosuki/AtCoder-Tester',
     period: '2023/07 ~ 2023/08',
-    skills: [SiPython, SiGnubash],
+    skills: [
+      { icon: SiPython, label: 'Python' },
+      { icon: SiGnubash, label: 'Bash' },
+    ],
   },
 ];
