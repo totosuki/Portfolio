@@ -5,13 +5,13 @@ function TmuxHeaderLeft({ activeTab, setActiveTab }: TabState) {
     <div className='flex gap-[1em]'>
       <span>mac |</span>
       <span
-        className={activeTab !== 'home' ? 'text-gray-500' : ''}
+        className={`cursor-pointer ${activeTab !== 'home' ? 'text-gray-500' : ''}`}
         onClick={() => setActiveTab('home')}
       >
         1:home{activeTab === 'home' ? '*' : '-'}
       </span>
       <span
-        className={activeTab !== 'products' ? 'text-gray-500' : ''}
+        className={`cursor-pointer ${activeTab !== 'products' ? 'text-gray-500' : ''}`}
         onClick={() => setActiveTab('products')}
       >
         2:products{activeTab === 'products' ? '*' : '-'}
