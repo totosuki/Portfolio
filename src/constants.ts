@@ -40,7 +40,7 @@ export const PRODUCTS: ProductType[] = [
     ],
     url: 'https://github.com/totosuki/totosuki.github.io',
     period: '2024/11 ~ now',
-    skills: [SiHtml5, SiCss3, SiJavascript, SiPython],
+    skills: [SiHtml5, SiCss3, SiJavascript],
   },
   {
     name: 'Matrix Stream',
@@ -70,7 +70,7 @@ export const PRODUCTS: ProductType[] = [
     ],
     url: 'https://github.com/totosuki/homehome',
     period: '2025/03 ~ 2025/04',
-    skills: [SiHtml5, SiCss3, SiJavascript, SiPython, SiDocker, SiNginx, FaAws],
+    skills: [SiPython, SiDocker, SiNginx, FaAws],
   },
   {
     name: 'jmp',
