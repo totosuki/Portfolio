@@ -2,7 +2,7 @@ import Clock from "./Clock";
 
 function TmuxHeaderRight() {
   return (
-    <div>
+    <div className='hidden md:block'>
       <p>
         <Clock />
       </p>

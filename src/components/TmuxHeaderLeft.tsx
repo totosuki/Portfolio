@@ -3,7 +3,7 @@ import type { TabState } from "../types";
 function TmuxHeaderLeft({ activeTab, setActiveTab }: TabState) {
   return (
     <div className='flex gap-[1em]'>
-      <span>mac |</span>
+      <span className='hidden md:block'>mac |</span>
       <span
         className={`cursor-pointer ${activeTab !== 'home' ? 'text-gray-500' : ''}`}
         onClick={() => setActiveTab('home')}

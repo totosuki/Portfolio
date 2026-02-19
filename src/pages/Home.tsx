@@ -9,7 +9,7 @@ import { ASCII_TITLE } from "../constants";
 function AsciiTitle() {
   return (
     <div className='overflow-hidden'>
-      <pre className='leading-none animate-marquee'>{ASCII_TITLE}</pre>
+      <pre className='text-[6px] md:text-base leading-none animate-marquee'>{ASCII_TITLE}</pre>
     </div>
   );
 }
@@ -17,14 +17,14 @@ function AsciiTitle() {
 function AboudMe() {
   return (
     <div>
-      <p className='text-4xl mb-[20px]'>About me</p>
-      <div className='flex items-center ml-[20px] gap-[40px]'>
+      <p className='text-3xl md:text-4xl mb-[20px]'>About me</p>
+      <div className='flex flex-col md:flex-row items-center md:ml-[20px] gap-[20px] md:gap-[40px]'>
         <img
           src={icon}
           alt='icon'
-          className='w-[250px] h-[250px] rounded-full object-cover'
+          className='w-[150px] h-[150px] md:w-[250px] md:h-[250px] rounded-full object-cover'
         />
-        <div className='flex-col w-[450px]'>
+        <div className='flex-col md:w-[450px]'>
           <p className='text-2xl mb-[20px]'>totosuki</p>
           <p>
             情報工学系の大学2年生。<br/>
@@ -39,8 +39,8 @@ function AboudMe() {
 function Links() {
   return (
     <div>
-      <p className='text-4xl mb-[20px]'>Links</p>
-      <div className='flex flex-col gap-[10px] ml-[20px]'>
+      <p className='text-3xl md:text-4xl mb-[20px]'>Links</p>
+      <div className='flex flex-col gap-[10px] md:ml-[20px]'>
         <a href='https://x.com/totosuki_' target='_blank' className='flex gap-[20px] items-center hover:underline'>
           <img src={x} alt='X' className='w-[20px] h-[20px]' />
           <p>X (旧Twitter) : https://x.com/totosuki_</p>
@@ -65,16 +65,16 @@ function Links() {
 function Pages({ setActiveTab }: Pick<TabState, 'setActiveTab'>) {
   return (
     <div>
-      <p className='text-4xl mb-[20px]'>Pages</p>
-      <div className='ml-[20px] flex gap-[20px]'>
+      <p className='text-3xl md:text-4xl mb-[20px]'>Pages</p>
+      <div className='flex gap-[20px] md:ml-[20px]'>
         <div
-          className='text-2xl hover:bg-white hover:text-black cursor-pointer'
+          className='md:text-2xl hover:bg-white hover:text-black cursor-pointer'
           onClick={() => setActiveTab('products')}
         >
           products/
         </div>
-        <div className='text-2xl hover:bg-white hover:text-black cursor-pointer'>skills/</div>
-        <div className='text-2xl hover:bg-white hover:text-black cursor-pointer'>hobby/</div>
+        <div className='md:text-2xl hover:bg-white hover:text-black cursor-pointer'>skills/</div>
+        <div className='md:text-2xl hover:bg-white hover:text-black cursor-pointer'>hobby/</div>
       </div>
     </div>
   );
@@ -82,7 +82,7 @@ function Pages({ setActiveTab }: Pick<TabState, 'setActiveTab'>) {
 
 function Home({ setActiveTab }: Pick<TabState, 'setActiveTab'>) {
   return (
-    <div className='flex flex-col px-[30px] pt-[20px] pb-[50px] gap-[30px]'>
+    <div className='flex flex-col px-[10px] pt-[10px] pb-[50px] md:px-[30px] md:pt-[20px] md:pb-[50px] gap-[30px]'>
       <AsciiTitle />
       <AboudMe />
       <Links />
