@@ -1,4 +1,4 @@
-export type Tab = 'home' | 'products';
+export type Tab = 'home' | 'products' | 'skills';
 
 export type TabState = {
   activeTab: Tab;

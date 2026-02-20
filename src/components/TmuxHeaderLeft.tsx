@@ -15,7 +15,13 @@ function TmuxHeaderLeft({ activeTab, setActiveTab }: TabState) {
         onClick={() => setActiveTab('products')}
       >
         2:products{activeTab === 'products' ? '*' : '-'}
-        </span>
+      </span>
+      <span
+        className={`cursor-pointer ${activeTab !== 'skills' ? 'text-gray-500' : ''}`}
+        onClick={() => setActiveTab('skills')}
+      >
+        3:skills{activeTab === 'skills' ? '*' : '-'}
+      </span>
     </div>
   );
 }

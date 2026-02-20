@@ -31,6 +31,10 @@ function Tmux() {
         e.preventDefault();
         setActiveTab('products');
       }
+      else if (e.key === '3') {
+        e.preventDefault();
+        setActiveTab('skills');
+      }
       setPrefix(false);
     }
 
