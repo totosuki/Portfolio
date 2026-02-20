@@ -1,4 +1,5 @@
 import { IoMdStar, IoMdStarOutline } from 'react-icons/io'
+import SkillIconItem from '../components/SkillIconItem';
 import { SKILLS } from "../constants";
 
 function Skills() {
@@ -17,9 +18,13 @@ function Skills() {
                   })}
                 </div>
               </div>
-              {skill.icons.map((icon) => <icon.icon size={50}/>)}
+              <div className='flex flex-row gap-[10px]'>
+                {skill.icons.map((icon) => <SkillIconItem size={50} icon={icon.icon} label={icon.label} />)}
+              </div>
             </div>
-            <p>{skill.description}</p>
+            <div>
+              {skill.description.map((line) => <p>{line}</p>)}
+            </div>
           </div>
         ))}
       </div>

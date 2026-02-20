@@ -1,6 +1,6 @@
-import type { SkillIcon } from "../constants";
+import type { Icon } from "../types";
 
-function SkillIconItem({ size, icon: Icon, label }: {size: number} & SkillIcon) {
+function SkillIconItem({ size, icon: Icon, label }: {size: number} & Icon) {
   return (
     <div className='relative group'>
       {typeof Icon === 'string'
