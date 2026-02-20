@@ -1,5 +1,5 @@
 import { FaAws } from "react-icons/fa";
-import { SiArduino, SiCplusplus, SiCss3, SiDocker, SiGnubash, SiHomebrew, SiHtml5, SiJavascript, SiMongodb, SiNginx, SiPython, SiRaspberrypi, SiReact, SiRust, SiTypescript } from "react-icons/si";
+import { SiArduino, SiCplusplus, SiCss3, SiDocker, SiDotnet, SiGnubash, SiHomebrew, SiHtml5, SiJavascript, SiLinux, SiMongodb, SiNginx, SiPython, SiRaspberrypi, SiReact, SiRust, SiTypescript } from "react-icons/si";
 import type { IconType } from "react-icons/lib";
 
 
@@ -13,7 +13,7 @@ export const ASCII_TITLE = `  /$$                 /$$                           
   \\___/   \\______/    \\___/   \\______/ |_______/  \\______/ |__/  \\__/|__/
 `;
 
-export type Skill = {
+export type SkillIcon = {
   icon: IconType;
   label: string;
 }
@@ -23,7 +23,7 @@ export type ProductType = {
   description: string[];
   url: string;
   period: string;
-  skills: Skill[];
+  skills: SkillIcon[];
 };
 
 export const PRODUCTS: ProductType[] = [
@@ -159,6 +159,47 @@ export const PRODUCTS: ProductType[] = [
     skills: [
       { icon: SiPython, label: 'Python' },
       { icon: SiGnubash, label: 'Bash' },
+    ],
+  },
+];
+
+export type SkillType = {
+  name: string;
+  description: string[];
+  star: number;
+  icons: SkillIcon[];
+};
+
+export const SKILLS: SkillType[] = [
+  {
+    name: 'Python',
+    description: [
+      'メインの言語。機械学習・Discord Bot・WebスクレイピングなどをPythonで実装してきた。',
+      '標準ライブラリやサードパーティパッケージを活用した実践的な開発経験が豊富。',
+    ],
+    star: 5,
+    icons: [
+      { icon: SiPython, label: 'Python' },
+    ],
+  },
+  {
+    name: 'C#',
+    description: [
+      'Unity開発をきっかけに習得。中学生のころゲーム制作でC#を書き始め、オブジェクト指向を深く学んだ。',
+    ],
+    star: 4,
+    icons: [
+      { icon: SiDotnet, label: 'C#' },
+    ],
+  },
+  {
+    name: 'Linux',
+    description: [
+      'サーバー運用・開発環境として日常的に使用。コマンドライン操作やシステム管理に精通している。',
+    ],
+    star: 3,
+    icons: [
+      { icon: SiLinux, label: 'Linux' },
     ],
   },
 ];
