@@ -19,7 +19,18 @@ function Products() {
                 <div>
                   {product.description.map((description) => (
                     <div>
-                      {description.map((line) => <span>{line.content}</span>)}
+                      {description.map((segment) => (
+                        segment.url
+                          ? <a
+                              href={segment.url}
+                              target='_blank'
+                              rel='noopener noreferrer'
+                              className='underline underline-offset-2 hover:bg-white hover:text-black hover:no-underline'
+                          >
+                            {segment.content}
+                          </a>
+                          : <span>{segment.content}</span>
+                      ))}
                     </div>
                   ))}
                 </div>

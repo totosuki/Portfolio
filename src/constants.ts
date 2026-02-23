@@ -22,7 +22,8 @@ export const PRODUCTS: Product[] = [
         { content: 'ターミナル風のデザインにこだわった個人ポートフォリオサイト。' }
       ],
       [
-        { content: 'tmuxライクなUIをReact + TypeScriptで表現した。' }
+        { content: 'tmux', url: 'https://github.com/tmux/tmux'},
+        { content: 'ライクなUIをReact + TypeScriptで表現した。' }
       ],
     ],
     url: 'https://github.com/totosuki/Portfolio',
@@ -69,7 +70,11 @@ export const PRODUCTS: Product[] = [
     name: 'lchat',
     description: [
       [{ content: 'LAN上で動作するRust製のTUIチャットアプリ。' }],
-      [{ content: 'TCPサーバーとcrosstermを使ったターミナルクライアントの2バイナリ構成で、マルチスレッドによるリアルタイム通信が可能。' }],
+      [
+        { content: 'TCPサーバーと' },
+        { content: 'crossterm', url: 'https://docs.rs/crossterm/latest/crossterm' },
+        { content: 'を使ったターミナルクライアントの2バイナリ構成で、マルチスレッドによるリアルタイム通信が可能。' }
+      ],
     ],
     url: 'https://github.com/totosuki/lchat',
     period: '2025/06 ~ 2025/07',
@@ -97,7 +102,11 @@ export const PRODUCTS: Product[] = [
     description: [
       [{ content: 'ディレクトリの移動を高速化するHomebrew対応CLIツール。' }],
       [{ content: 'ディレクトリ一覽をキャッシュしておき、曖昧な検索で目的のディレクトリへ移動できる。' }],
-      [{ content: 'tmux環境にも対応しており、fdコマンドが利用可能な場合はより高速なキャッシュ更新が可能。' }],
+      [
+        { content: 'tmux', url: 'https://github.com/tmux/tmux' },
+        { content: '環境にも対応しており、' },
+        { content: 'fd', url: 'https://github.com/sharkdp/fd' },
+        { content: 'コマンドが利用可能な場合はより高速なキャッシュ更新が可能。' }],
     ],
     url: 'https://github.com/totosuki/homebrew-jmp',
     period: '2024/11',
@@ -111,7 +120,15 @@ export const PRODUCTS: Product[] = [
     description: [
       [{ content: 'Arduinoを使って複数の楽曲を演奏するミュージックプレイヤー。' }],
       [{ content: 'ロータリースイッチとボタンで曲を選択し、OLEDディスプレイに曲名と再生時間がリアルタイムで表示される。' }],
-      [{ content: '収録楽曲: ドラゴンクエスト序曲、Shape of You、MEGALOVANIA、You' }],
+      [
+        { content: '収録楽曲: ' },
+        { content: 'ドラゴンクエスト序曲', url: 'https://youtu.be/LMiITaxX5kg' },
+        { content: '、' },
+        { content: 'Shape of You', url: 'https://youtu.be/JGwWNGJdvx8' },
+        { content: '、' },
+        { content: 'MEGALOVANIA', url: 'https://youtu.be/0FCvzsVlXpQ' },
+        { content: '、' },
+        {content: 'You', url: 'https://youtu.be/sbux2bgbKj8' }],
     ],
     url: 'https://github.com/totosuki/arduino-player',
     period: '2024/10',
@@ -123,7 +140,12 @@ export const PRODUCTS: Product[] = [
   {
     name: 'XMR Bot',
     description: [
-      [{ content: 'Monero（XMR）のマイニングプール「nanopool」の採掘状況をDiscord上で確認できるBot。' }],
+      [
+        { content: 'Monero（XMR）', url: 'https://www.getmonero.org/' },
+        { content: 'のマイニングプール「' },
+        { content: 'nanopool', url: 'https://nanopool.org/' },
+        { content: '」の採掘状況をDiscord上で確認できるBot。' },
+      ],
       [{ content: 'ウォレットアドレス・残高・ハッシュレート・採掘メンバーなどをスラッシュコマンドで表示できる。' }],
     ],
     url: 'https://github.com/totosuki/xmr-bot',
@@ -149,7 +171,11 @@ export const PRODUCTS: Product[] = [
   {
     name: 'AtCoder Tester',
     description: [
-      [{ content: '競技プログラミングサイト「AtCoder」における、テスト・提出作業を自動化するCLIツール。' }],
+      [
+        { content: '競技プログラミングサイト「' },
+        { content: 'AtCoder', url: 'https://atcoder.jp/' },
+        { content: '」における、テスト・提出作業を自動化するCLIツール。' }
+      ],
       [{ content: 'att test / att submit コマンド一つで、取得・実行・比較・提出まで完結できる。' }],
     ],
     url: 'https://github.com/totosuki/AtCoder-Tester',
@@ -166,7 +192,11 @@ export const SKILLS: Skill[] = [
     name: 'Python',
     description: [
       [{ content: 'Python (CPython) へのContribute経験あり。' }],
-      [{ content: 'Pythonに関する技術サイト「PySight」を運営している。' }],
+      [
+        { content: 'Pythonに関する技術サイト「' },
+        { content: 'PySight', url: 'https://pysight.dev/' },
+        { content: '」を運営している。' }
+      ],
       [{ content: '機械学習・Bot開発・Webアプリ・CLIアプリなどの様々なプログラムで使用経験があり、私が最も好きなプログラミング言語。' }],
     ],
     star: 5,
@@ -213,7 +243,12 @@ export const SKILLS: Skill[] = [
     name: 'Algorithm',
     description: [
       [{ content: '高校時代に競技プログラミングに取り組み、計算量解析・データ構造・グラフ探索などのアルゴリズムの基礎を習得した。' }],
-      [{ content: 'AtCoderのレートは1100 (緑色)。(https://atcoder.jp/users/totosuki)' }],
+      [
+        { content: 'AtCoder', url: 'https://atcoder.jp/' },
+        { content: 'のレートは1100 (緑色)。(' },
+        { content: 'https://atcoder.jp/users/totosuki', url: 'https://atcoder.jp/users/totosuki' },
+        { content: ')' }
+      ],
     ],
     star: 4,
     icons: [
@@ -245,7 +280,12 @@ export const SKILLS: Skill[] = [
   {
     name: 'HTML / CSS / JavaScript',
     description: [
-      [{ content: 'PySightやhomehomeの開発を通じて、バニラJSによるDOM操作・イベント処理・CSSアニメーションを実践した。' }],
+      [
+        { content: 'PySight', url: 'https://pysight.dev/' },
+        { content: 'や' },
+        { content: 'homehome', url: 'https://github.com/totosuki/homehome' },
+        { content: 'の開発を通じて、バニラJSによるDOM操作・イベント処理・CSSアニメーションを実践した。' }
+      ],
       [{ content: 'ライブラリを使わずHTML/CSS/JSのみで静的サイトを構築した経験がある。'}]
     ],
     star: 4,
@@ -270,7 +310,12 @@ export const SKILLS: Skill[] = [
   {
     name: 'Docker',
     description: [
-      [{ content: 'homehomeやObserver Botの運用でDocker Composeを用いたコンテナ管理を経験。' }],
+      [
+        { content: 'homehome', url: 'https://github.com/totosuki/homehome' },
+        { content: 'や' },
+        { content: 'Observer Bot', url: 'https://github.com/totosuki/discord-bot-observer' },
+        { content: 'の運用でDocker Composeを用いたコンテナ管理を経験。' }
+      ],
       [{ content: '開発・本番環境の統一やサービスの依存関係管理に活用した経験がある。' }],
     ],
     star: 3,
@@ -281,7 +326,12 @@ export const SKILLS: Skill[] = [
   {
     name: 'Rust',
     description: [
-      [{ content: 'Matrix StreamやlchatなどのCLI・組み込みプロジェクトで使用した。' }],
+      [
+        { content: 'Matrix Stream', url: 'https://github.com/totosuki/matrix-stream' },
+        { content: 'や' },
+        { content: 'lchat', url: 'https://github.com/totosuki/lchat' },
+        { content: 'などのCLI・組み込みプロジェクトで使用した。' }
+      ],
       [{ content: '所有権・借用・ライフタイムの概念を学びながら、実践を通じて少しずつ習熟している。'}]
     ],
     star: 3,
@@ -292,7 +342,12 @@ export const SKILLS: Skill[] = [
   {
     name: 'ShellScript',
     description: [
-      [{ content: 'jmpやその他CLIツール類の開発でBashスクリプトを実装した。' }],
+      [
+        { content: 'jmp', url: 'https://github.com/totosuki/homebrew-jmp' },
+        { content: 'や' },
+        { content: 'その他CLIツール', url: 'https://github.com/totosuki/tools/tree/main/commands' },
+        { content: 'の開発でBashスクリプトを実装した。' }
+      ],
       [{ content: 'ファイル操作・プロセス管理・パイプを活用した自動化スクリプトの作成経験がある。' }]
     ],
     star: 3,
@@ -314,7 +369,12 @@ export const SKILLS: Skill[] = [
   {
     name: 'AWS',
     description: [
-      [{ content: 'homehomeやObserver BotのEC2を用いたサーバー運用で使用した。'}],
+      [
+        { content: 'homehome', url: 'https://github.com/totosuki/homehome' },
+        { content: 'や' },
+        { content: 'Observer Bot', url: 'https://github.com/totosuki/discord-bot-observer' },
+        { content: 'のEC2を用いたサーバー運用で使用した。'}
+      ],
       [{ content: '基本的なインスタンス管理やセキュリティグループの設定の経験がある。'}]
     ],
     star: 2,
@@ -336,7 +396,12 @@ export const SKILLS: Skill[] = [
   {
     name: 'MySQL / MongoDB',
     description: [
-      [{ content: 'Observer BotでMongoDBを、大学の講義やMusic DatabaseでMySQLを使用した。'}],
+      [
+        { content: 'Observer Bot', url: 'https://github.com/totosuki/discord-bot-observer' },
+        { content: 'でMongoDBを、大学の講義や' },
+        { content: 'Music Database', url: 'https://github.com/totosuki/music-database' },
+        { content: 'でMySQLを使用した。'}
+      ],
       [{ content: '基本的なCRUD操作とスキーマ設計の経験がある。' }]
     ],
     star: 2,
@@ -348,7 +413,10 @@ export const SKILLS: Skill[] = [
   {
     name: 'Nginx',
     description: [
-      [{ content: 'homehomeのリバースプロキシとしてDocker Compose環境内で設定・運用した経験がある。'}]
+      [
+        { content: 'homehome', url: 'https://github.com/totosuki/homehome' },
+        { content: 'のリバースプロキシとしてDocker Compose環境内で設定・運用した経験がある。'}
+      ]
     ],
     star: 2,
     icons: [
