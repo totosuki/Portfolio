@@ -165,9 +165,9 @@ export const SKILLS: Skill[] = [
   {
     name: 'Python',
     description: [
-      'Python (CPython) へのContribute経験あり。',
-      'Pythonに関する技術サイト「PySight」を運営している。',
-      '機械学習・Bot開発・Webアプリ・CLIアプリなどの様々なプログラムで使用経験があり、私が最も好きなプログラミング言語。',
+      [{ content: 'Python (CPython) へのContribute経験あり。' }],
+      [{ content: 'Pythonに関する技術サイト「PySight」を運営している。' }],
+      [{ content: '機械学習・Bot開発・Webアプリ・CLIアプリなどの様々なプログラムで使用経験があり、私が最も好きなプログラミング言語。' }],
     ],
     star: 5,
     icons: [
@@ -177,8 +177,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'C#',
     description: [
-      '中学2年生のころゲーム開発でC#に入門し、オブジェクト指向の基礎をここで身につけた。',
-      '長期インターンでは約半年間、Windows Formsアプリの実務開発に従事した。',
+      [{ content: '中学2年生のころゲーム開発でC#に入門し、オブジェクト指向の基礎をここで身につけた。' }],
+      [{ content: '長期インターンでは約半年間、Windows Formsアプリの実務開発に従事した。' }],
     ],
     star: 5,
     icons: [
@@ -188,8 +188,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'Linux',
     description: [
-      '2年以上Ubuntuをメインの開発環境として使用しており、CLIでの作業が基本スタイル。',
-      'VPSへのサーバー構築・サービスのデプロイ・ネットワーク疎通確認など、実務的なLinux操作を経験している。',
+      [{ content: '2年以上Ubuntuをメインの開発環境として使用しており、CLIでの作業が基本スタイル。' }],
+      [{ content: 'VPSへのサーバー構築・サービスのデプロイ・ネットワーク疎通確認など、実務的なLinux操作を経験している。' }],
     ],
     star: 5,
     icons: [
@@ -200,8 +200,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'Git / GitHub',
     description: [
-      'すべての個人プロジェクトで使用しており、日常的に扱っている。',
-      'OSSへのコントリビュート実績があるほか、Issue/PRを活用した共同開発やGitHub ActionsによるCI/CD構築も経験している。',
+      [{ content: 'すべての個人プロジェクトで使用しており、日常的に扱っている。' }],
+      [{ content: 'OSSへのコントリビュート実績があるほか、Issue/PRを活用した共同開発やGitHub ActionsによるCI/CD構築も経験している。' }],
     ],
     star: 3,
     icons: [
@@ -212,8 +212,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'Algorithm',
     description: [
-      '高校時代に競技プログラミングに取り組み、計算量解析・データ構造・グラフ探索などのアルゴリズムの基礎を習得した。',
-      'AtCoderのレートは1100 (緑色)。(https://atcoder.jp/users/totosuki)'
+      [{ content: '高校時代に競技プログラミングに取り組み、計算量解析・データ構造・グラフ探索などのアルゴリズムの基礎を習得した。' }],
+      [{ content: 'AtCoderのレートは1100 (緑色)。(https://atcoder.jp/users/totosuki)' }],
     ],
     star: 4,
     icons: [
@@ -223,7 +223,7 @@ export const SKILLS: Skill[] = [
   {
     name: 'AWK',
     description: [
-      '長期インターンで社内の既存AWKプログラムを読み解き、調査書としてドキュメント化する業務を通じて習得した。',
+      [{ content: '長期インターンで社内の既存AWKプログラムを読み解き、調査書としてドキュメント化する業務を通じて習得した。' }],
     ],
     star: 4,
     icons: [
@@ -233,8 +233,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'C / C++',
     description: [
-      '大学の講義でメモリ管理やポインタ操作などの基礎的な文法を習得した。',
-      'Arduinoの組み込み開発や自作コンパイラ作成で使用した経験がある。',
+      [{ content: '大学の講義でメモリ管理やポインタ操作などの基礎的な文法を習得した。' }],
+      [{ content: 'Arduinoの組み込み開発や自作コンパイラ作成で使用した経験がある。' }],
     ],
     star: 4,
     icons: [
@@ -245,7 +245,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'HTML / CSS / JavaScript',
     description: [
-      'PySight（個人技術サイト）の開発や、で使用。バニラJSによるDOM操作やCSSアニメーションの実装経験がある。',
+      [{ content: 'PySightやhomehomeの開発を通じて、バニラJSによるDOM操作・イベント処理・CSSアニメーションを実践した。' }],
+      [{ content: 'ライブラリを使わずHTML/CSS/JSのみで静的サイトを構築した経験がある。'}]
     ],
     star: 4,
     icons: [
@@ -257,8 +258,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'TypeScript / React',
     description: [
-      'このポートフォリオサイトをはじめ、React + TypeScriptを用いたWebアプリ開発に取り組んでいる。',
-      '型安全なコンポーネント設計やhooksを活用した状態管理を実践している。',
+      [{ content: 'このポートフォリオサイトの開発を機にTypeScript + Reactを本格的に習得した。' }],
+      [{ content: 'コンポーネント設計・hooksによる状態管理・カスタム型定義など、一通りの実装経験がある。' }],
     ],
     star: 4,
     icons: [
@@ -269,8 +270,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'Docker',
     description: [
-      'homehomeやObserver Botの運用でDocker Composeを用いたコンテナ管理を経験。',
-      '開発・本番環境の統一やサービスの依存関係管理に活用している。',
+      [{ content: 'homehomeやObserver Botの運用でDocker Composeを用いたコンテナ管理を経験。' }],
+      [{ content: '開発・本番環境の統一やサービスの依存関係管理に活用した経験がある。' }],
     ],
     star: 3,
     icons: [
@@ -280,7 +281,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'Rust',
     description: [
-      'Matrix StreamやlchatなどのCLI・組み込みプロジェクトで使用。所有権・借用・ライフタイムの概念を理解している。',
+      [{ content: 'Matrix StreamやlchatなどのCLI・組み込みプロジェクトで使用した。' }],
+      [{ content: '所有権・借用・ライフタイムの概念を学びながら、実践を通じて少しずつ習熟している。'}]
     ],
     star: 3,
     icons: [
@@ -290,7 +292,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'ShellScript',
     description: [
-      'jmpやAtCoder Testerの開発でBashスクリプトを実装。ファイル操作・プロセス管理・パイプを活用した自動化ができる。',
+      [{ content: 'jmpやその他CLIツール類の開発でBashスクリプトを実装した。' }],
+      [{ content: 'ファイル操作・プロセス管理・パイプを活用した自動化スクリプトの作成経験がある。' }]
     ],
     star: 3,
     icons: [
@@ -300,7 +303,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'Unity',
     description: [
-      'ゲーム開発への憧れからプログラミングを始めたきっかけの環境。2Dゲームの制作経験がある。',
+      [{ content: 'ゲーム開発への憧れからプログラミングを始めたきっかけの環境。' }],
+      [{ content: 'プログラム講師として指導しているほか、過去に3D・2D合わせて10個程度ゲームを作成した経験がある。' }]
     ],
     star: 3,
     icons: [
@@ -310,7 +314,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'AWS',
     description: [
-      'homehomeのEC2を用いたサーバー運用で使用。基本的なインスタンス管理やセキュリティグループの設定ができる。',
+      [{ content: 'homehomeやObserver BotのEC2を用いたサーバー運用で使用した。'}],
+      [{ content: '基本的なインスタンス管理やセキュリティグループの設定の経験がある。'}]
     ],
     star: 2,
     icons: [
@@ -320,7 +325,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'Burp Suite',
     description: [
-      'Webセキュリティの学習目的で使用。プロキシを用いたHTTPリクエストの傍受・改ざんの基礎を理解している。',
+      [{ content: 'GMO Flatt Securityのサマーインターンで使用した経験がある。' }],
+      [{ content: 'Webセキュリティの学習を通じて、プロキシを用いたHTTPリクエストの傍受・改ざんの基礎を学んだ。'}],
     ],
     star: 2,
     icons: [
@@ -330,7 +336,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'MySQL / MongoDB',
     description: [
-      'Observer BotでMongoDBを、学習目的でMySQLを使用。基本的なCRUD操作とスキーマ設計ができる。',
+      [{ content: 'Observer BotでMongoDBを、大学の講義やMusic DatabaseでMySQLを使用した。'}],
+      [{ content: '基本的なCRUD操作とスキーマ設計の経験がある。' }]
     ],
     star: 2,
     icons: [
@@ -341,7 +348,7 @@ export const SKILLS: Skill[] = [
   {
     name: 'Nginx',
     description: [
-      'homehomeのリバースプロキシとしてDocker Compose環境内で設定・運用した経験がある。',
+      [{ content: 'homehomeのリバースプロキシとしてDocker Compose環境内で設定・運用した経験がある。'}]
     ],
     star: 2,
     icons: [

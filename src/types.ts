@@ -29,7 +29,7 @@ export type Product = {
 
 export type Skill = {
   name: string;
-  description: string[];
+  description: Description[];
   star: number;
   icons: Icon[];
 };

@@ -17,7 +17,11 @@ function Products() {
               </div>
               <div className='flex flex-col gap-[20px]'>
                 <div>
-                  {product.description.map((line) => <p>{line}</p>)}
+                  {product.description.map((description) => (
+                    <div>
+                      {description.map((line) => <span>{line.content}</span>)}
+                    </div>
+                  ))}
                 </div>
                 <p>{product.period}</p>
               </div>
