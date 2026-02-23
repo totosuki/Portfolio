@@ -1,5 +1,5 @@
 import { IoTerminal } from 'react-icons/io5';
-import bg from '../assets/background.jpg';
+import bg from '../assets/background.webp';
 
 function Background({ onOpen }: { onOpen: () => void }) {
   return (
