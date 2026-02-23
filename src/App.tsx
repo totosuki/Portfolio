@@ -24,7 +24,7 @@ function App() {
       loadImage(bg),
       loadImage(icon),
     ])
-      .then(() => setIsLoading(false));
+    .then(() => setIsLoading(false));
   }, []);
 
   if (isLoading) return <Loading />;
