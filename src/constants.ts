@@ -233,7 +233,7 @@ export const SKILLS: Skill[] = [
       [{ content: 'すべての個人プロジェクトで使用しており、日常的に扱っている。' }],
       [{ content: 'OSSへのコントリビュート実績があるほか、Issue/PRを活用した共同開発やGitHub ActionsによるCI/CD構築も経験している。' }],
     ],
-    star: 3,
+    star: 5,
     icons: [
       { icon: SiGit, label: 'Git' },
       { icon: SiGithub, label: 'GitHub' },
