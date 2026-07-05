@@ -14,7 +14,7 @@ function TmuxHeaderLeft({ activeTab, setActiveTab }: TabState) {
   const host = parseHost();
 
   return (
-    <div className='flex gap-[1em]'>
+    <div className='flex gap-[0.5em] md:gap-[1em] text-sm md:text-base'>
       <span className='hidden md:block'>{host} |</span>
       <span
         className={`cursor-pointer ${activeTab !== 'home' ? 'text-gray-500' : ''}`}
@@ -33,6 +33,12 @@ function TmuxHeaderLeft({ activeTab, setActiveTab }: TabState) {
         onClick={() => setActiveTab('skills')}
       >
         3:skills{activeTab === 'skills' ? '*' : '-'}
+      </span>
+      <span
+        className={`cursor-pointer ${activeTab !== 'career' ? 'text-gray-500' : ''}`}
+        onClick={() => setActiveTab('career')}
+      >
+        4:career{activeTab === 'career' ? '*' : '-'}
       </span>
     </div>
   );

@@ -1,6 +1,6 @@
 import { FaAws } from "react-icons/fa";
 import { SiArduino, SiBurpsuite, SiC, SiCplusplus, SiCss3, SiDocker, SiDotnet, SiGit, SiGithub, SiGnubash, SiHomebrew, SiHtml5, SiJavascript, SiLinux, SiMongodb, SiMysql, SiNginx, SiPython, SiRaspberrypi, SiReact, SiRust, SiTypescript, SiUbuntu, SiUnity } from "react-icons/si";
-import type { Product, Skill } from "./types";
+import type { Career, Product, Skill } from "./types";
 import atcoder from './assets/atcoder.png';
 
 
@@ -421,6 +421,96 @@ export const SKILLS: Skill[] = [
     star: 2,
     icons: [
       { icon: SiNginx, label: 'Nginx' },
+    ],
+  },
+];
+
+export const CAREERS: Career[] = [
+  {
+    period: '2006 春',
+    description: [
+      [{ content: '生まれる' }],
+    ],
+  },
+  {
+    period: '2019 春',
+    description: [
+      [{ content: '中学2年生でゲーム制作に憧れてプログラミングを始める' }],
+    ],
+  },
+  {
+    period: '2023 夏',
+    description: [
+      [
+        { content: '競技プログラミングにハマり、' },
+        { content: 'AtCoder', url: 'https://atcoder.jp/users/totosuki' },
+        { content: 'で緑コーダーになる' },
+      ],
+    ],
+  },
+  {
+    period: '2023 冬 ~ 2026 春',
+    description: [
+      [
+        { content: 'プログラミング教室「' },
+        { content: 'N Code Labo', url: 'https://n-codelabo.jp/' },
+        { content: '」でプログラム講師として勤務' },
+      ],
+    ],
+  },
+  {
+    period: '2024 夏',
+    description: [
+      [
+        { content: 'セキュリティ・キャンプ2024 全国大会', url: 'https://www.ipa.go.jp/archive/jinzai/security-camp/2024/camp/zenkoku/index.html' },
+        { content: 'に参加（IoTコース）' },
+      ],
+    ],
+  },
+  {
+    period: '2024 冬',
+    description: [
+      [
+        { content: 'Python本体（' },
+        { content: 'CPython', url: 'https://github.com/python/cpython/pull/127913' },
+        { content: '）へのContributeを行う' },
+      ],
+    ],
+  },
+  {
+    period: '2025 夏',
+    description: [
+      [
+        { content: 'GMO Flatt Security株式会社', url: 'https://flatt.tech/' },
+        { content: 'のサマーインターンに参加' },
+      ],
+    ],
+  },
+  {
+    period: '2025 冬 ~ 2026 春',
+    description: [
+      [
+        { content: '株式会社計算力学研究センター', url: 'https://www.rccm.co.jp/' },
+        { content: 'でインターンとして勤務' },
+      ],
+    ],
+  },
+  {
+    period: '2026 春 ~ 2026 夏',
+    description: [
+      [
+        { content: '丸紅株式会社', url: 'https://www.marubeni.com/jp/' },
+        { content: 'でインターンとして勤務' },
+      ],
+    ],
+  },
+  {
+    period: '2026 夏 ~ now',
+    description: [
+      [
+        { content: 'Digital Experts株式会社', url: 'https://d-experts.com/' },
+        { content: 'でインターンとして勤務' },
+      ],
     ],
   },
 ];

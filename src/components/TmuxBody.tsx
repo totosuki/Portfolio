@@ -1,4 +1,5 @@
 import type { TabState } from '../types';
+import Career from '../pages/Career';
 import Home from '../pages/Home';
 import Products from '../pages/Products';
 import Skills from '../pages/Skills';
@@ -9,6 +10,7 @@ function TmuxBody({ activeTab, setActiveTab }: TabState) {
       case 'home': return <Home setActiveTab={setActiveTab} />;
       case 'products': return <Products />;
       case 'skills': return <Skills />;
+      case 'career': return <Career />;
     }
   };
 

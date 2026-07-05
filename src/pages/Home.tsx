@@ -79,6 +79,12 @@ function Pages({ setActiveTab }: Pick<TabState, 'setActiveTab'>) {
         >
           skills/
         </div>
+        <div
+          className='md:text-2xl hover:bg-white hover:text-black cursor-pointer'
+          onClick={() => setActiveTab('career')}
+        >
+          career/
+        </div>
         {/*<div className='md:text-2xl hover:bg-white hover:text-black cursor-pointer'>hobby/</div>*/}
       </div>
     </div>

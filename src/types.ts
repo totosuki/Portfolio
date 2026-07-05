@@ -1,6 +1,6 @@
 import type { IconType } from "react-icons/lib";
 
-export type Tab = 'home' | 'products' | 'skills';
+export type Tab = 'home' | 'products' | 'skills' | 'career';
 
 export type TabState = {
   activeTab: Tab;
@@ -32,4 +32,9 @@ export type Skill = {
   description: Description[];
   star: number;
   icons: Icon[];
+};
+
+export type Career = {
+  period: string;
+  description: Description[];
 };

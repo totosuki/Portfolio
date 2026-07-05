@@ -35,6 +35,10 @@ function Tmux() {
         e.preventDefault();
         setActiveTab('skills');
       }
+      else if (e.key === '4') {
+        e.preventDefault();
+        setActiveTab('career');
+      }
       setPrefix(false);
     }
 
