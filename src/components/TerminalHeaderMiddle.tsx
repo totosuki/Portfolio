@@ -14,7 +14,7 @@ function parseBrowser(): string {
   if (/OPR\/|Opera/.test(ua)) return 'Opera';
   if (/Chrome\//.test(ua)) return 'Chrome';
   if (/Safari\//.test(ua)) return 'Safari';
-  if (/FireFox\//.test(ua)) return 'Firefox';
+  if (/Firefox\//.test(ua)) return 'Firefox';
   return 'Unknown';
 }
 
