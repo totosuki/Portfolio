@@ -7,6 +7,11 @@ function Tmux({ onDetach }: { onDetach: () => void }) {
   const [activeTab, setActiveTab] = useState<Tab>('home');
   const [prefix, setPrefix] = useState(false);
 
+  // ターミナルのタイトルのように、タブに合わせてページタイトルを変更
+  useEffect(() => {
+    document.title = activeTab === 'home' ? 'totosuki: ~' : `totosuki: ~/${activeTab}`;
+  }, [activeTab]);
+
   // tmuxのPrefix (Ctrl+B) 検知
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
