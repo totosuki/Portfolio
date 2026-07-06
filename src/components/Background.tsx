@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { IoCalculator, IoTerminal } from 'react-icons/io5';
+import { IoCalculator, IoDocumentText, IoTerminal } from 'react-icons/io5';
 import { SiGithub, SiX, SiYoutube } from 'react-icons/si';
 import Calculator from './Calculator';
 import DesktopIcon from './DesktopIcon';
+import Note from './Note';
 import bg from '../assets/background.webp';
 
 function openLink(url: string) {
@@ -11,6 +12,7 @@ function openLink(url: string) {
 
 function Background({ onOpen }: { onOpen: () => void }) {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
+  const [isNoteOpen, setIsNoteOpen] = useState(false);
 
   return (
     <div
@@ -33,8 +35,12 @@ function Background({ onOpen }: { onOpen: () => void }) {
         <DesktopIcon label='Calculator' onClick={() => setIsCalculatorOpen(true)}>
           <IoCalculator size={70} color='black' />
         </DesktopIcon>
+        <DesktopIcon label='note.txt' onClick={() => setIsNoteOpen(true)}>
+          <IoDocumentText size={70} color='black' />
+        </DesktopIcon>
       </div>
       { isCalculatorOpen && <Calculator onClose={() => setIsCalculatorOpen(false)} /> }
+      { isNoteOpen && <Note onClose={() => setIsNoteOpen(false)} /> }
     </div>
   );
 }
