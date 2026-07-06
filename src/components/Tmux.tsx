@@ -56,7 +56,7 @@ function Tmux({ onDetach }: { onDetach: () => void }) {
 
   return (
     <div className='w-full h-[calc(100%-40px)] px-[15px] py-[10px]'>
-      <TmuxHeader activeTab={activeTab} setActiveTab={setActiveTab} />
+      <TmuxHeader activeTab={activeTab} setActiveTab={setActiveTab} prefix={prefix} />
       <TmuxBody activeTab={activeTab} setActiveTab={setActiveTab} />
     </div>
   );
