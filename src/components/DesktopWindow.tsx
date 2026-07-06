@@ -38,7 +38,7 @@ function DesktopWindow({ title, initialX, initialY, onClose, children }: {
       style={{ left: position.x, top: position.y }}
     >
       <div
-        className='flex items-center h-[40px] border-b border-white/20 cursor-grab touch-none'
+        className='flex items-center h-[40px] border-b border-white/20 cursor-grab touch-none select-none'
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
