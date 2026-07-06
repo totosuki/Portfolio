@@ -1,7 +1,8 @@
 function TerminalHeaderLeft({ onClose }: { onClose: () => void }) {
   const handleFullscreen = () => {
     if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
+      // iOSのSafariなど、フルスクリーン非対応の環境では何もしない
+      document.documentElement.requestFullscreen?.().catch(() => {});
     }
     else {
       document.exitFullscreen();
@@ -12,11 +13,13 @@ function TerminalHeaderLeft({ onClose }: { onClose: () => void }) {
     <div className='flex items-center ml-[15px] gap-[10px]'>
       {/* Macbookのボタン風デザイン */}
       <button
+        aria-label='Close'
         className='w-[15px] h-[15px] rounded-full bg-red-500 cursor-pointer'
         onClick={onClose}
       />
-      <button className='w-[15px] h-[15px] rounded-full bg-yellow-500'/>
+      <button aria-label='Minimize' className='w-[15px] h-[15px] rounded-full bg-yellow-500'/>
       <button
+        aria-label='Fullscreen'
         className='w-[15px] h-[15px] rounded-full bg-green-500 cursor-pointer'
         onClick={handleFullscreen}
       />

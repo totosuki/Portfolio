@@ -41,19 +41,19 @@ function Links() {
     <div>
       <p className='text-3xl md:text-4xl mb-[20px]'>Links</p>
       <div className='flex flex-col gap-[10px] md:ml-[20px]'>
-        <a href='https://x.com/totosuki_' target='_blank' className='flex gap-[20px] items-center hover:underline'>
+        <a href='https://x.com/totosuki_' target='_blank' rel='noopener noreferrer' className='flex gap-[20px] items-center hover:underline'>
           <img src={x} alt='X' className='w-[20px] h-[20px]' />
           <p>X (旧Twitter) : https://x.com/totosuki_</p>
         </a>
-        <a href='https://github.com/totosuki' target='_blank' className='flex gap-[20px] items-center hover:underline'>
+        <a href='https://github.com/totosuki' target='_blank' rel='noopener noreferrer' className='flex gap-[20px] items-center hover:underline'>
           <img src={github} alt='GitHub' className='w-[20px] h-[20px] invert' />
           <p>GitHub : https://github.com/totosuki</p>
         </a>
-        <a href='https://last.fm/user/totosuki' target='_blank' className='flex gap-[20px] items-center hover:underline'>
+        <a href='https://last.fm/user/totosuki' target='_blank' rel='noopener noreferrer' className='flex gap-[20px] items-center hover:underline'>
           <FaLastfm size={20} />
           <p>Last.fm : https://last.fm/user/totosuki</p>
         </a>
-        <a href='https://pysight.dev/' target='_blank' className='flex gap-[20px] items-center hover:underline'>
+        <a href='https://pysight.dev/' target='_blank' rel='noopener noreferrer' className='flex gap-[20px] items-center hover:underline'>
           <IoBrushOutline size={20} />
           <p>My Python Site : https://pysight.dev/</p>
         </a>

@@ -6,6 +6,7 @@ function TerminalHeaderRight() {
       <a
         href='https://github.com/totosuki'
         target='_blank'
+        rel='noopener noreferrer'
         className='invert'
       >
         <img
