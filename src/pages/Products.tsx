@@ -7,21 +7,22 @@ function Products() {
       <p className='text-3xl md:text-4xl md:m-[30px]'>Products</p>
       <div className='flex flex-col divide-y divide-white'>
         {PRODUCTS.map((product) => (
-          <a href={product.url} target='_blank' rel='noopener noreferrer'>
+          <a key={product.name} href={product.url} target='_blank' rel='noopener noreferrer'>
             <div className='flex flex-col md:flex-row gap-[20px] md:gap-[50px] px-[10px] py-[20px] md:p-[30px] hover:bg-white/5 transition-colors'>
               <div className='flex flex-col justify-between gap-[20px] w-[250px]'>
                 <p className='text-2xl'>{product.name}</p>
                 <div className='flex flex-row items-center gap-[20px]'>
-                  {product.skills.map((skill) => <SkillIconItem size={30} icon={skill.icon} label={skill.label} /> )}
+                  {product.skills.map((skill) => <SkillIconItem key={skill.label} size={30} icon={skill.icon} label={skill.label} /> )}
                 </div>
               </div>
               <div className='flex flex-col gap-[20px]'>
                 <div>
-                  {product.description.map((description) => (
-                    <div>
-                      {description.map((segment) => (
+                  {product.description.map((description, i) => (
+                    <div key={i}>
+                      {description.map((segment, j) => (
                         segment.url
                           ? <a
+                              key={j}
                               href={segment.url}
                               target='_blank'
                               rel='noopener noreferrer'
@@ -29,7 +30,7 @@ function Products() {
                           >
                             {segment.content}
                           </a>
-                          : <span>{segment.content}</span>
+                          : <span key={j}>{segment.content}</span>
                       ))}
                     </div>
                   ))}

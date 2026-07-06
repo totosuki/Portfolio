@@ -8,7 +8,7 @@ function Career() {
         <div className='absolute left-[8px] md:left-1/2 top-[5px] bottom-[5px] w-[2px] bg-white md:-translate-x-1/2' />
         <div className='flex flex-col gap-[40px]'>
           {CAREERS.map((career, i) => (
-            <div className='relative md:grid md:grid-cols-2'>
+            <div key={career.period} className='relative md:grid md:grid-cols-2'>
               <span className='absolute left-[9px] md:left-1/2 top-[5px] w-[14px] h-[14px] -translate-x-1/2 rounded-full border-2 border-white bg-black' />
               <div
                 className={`flex flex-col gap-[5px] pl-[35px] ${
@@ -19,11 +19,12 @@ function Career() {
               >
                 <p className='text-gray-500'>{career.period}</p>
                 <div>
-                  {career.description.map((description) => (
-                    <div className='break-all'>
-                      {description.map((segment) => (
+                  {career.description.map((description, j) => (
+                    <div key={j} className='break-all'>
+                      {description.map((segment, k) => (
                         segment.url
                           ? <a
+                            key={k}
                             href={segment.url}
                             target='_blank'
                             rel='noopener noreferrer'
@@ -31,7 +32,7 @@ function Career() {
                           >
                             {segment.content}
                           </a>
-                          : <span>{segment.content}</span>
+                          : <span key={k}>{segment.content}</span>
                       ))}
                     </div>
                   ))}

@@ -8,7 +8,7 @@ function Skills() {
       <p className='text-3xl md:text-4xl md:m-[30px]'>Skills</p>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-[30px] md:gap-[50px] m-[10px] mt-[30px] md:m-[30px]'>
         {SKILLS.map((skill) => (
-          <div className='flex flex-col border border-white rounded-[25px] p-[30px] gap-[10px]'>
+          <div key={skill.name} className='flex flex-col border border-white rounded-[25px] p-[30px] gap-[10px]'>
             <div className='flex flex-row justify-between items-center'>
               <div className='flex flex-col gap-[10px]'>
                 {
@@ -18,22 +18,23 @@ function Skills() {
                 }
                 <div className='flex flex-row gap-[2px] translate-x-[-3px]'>
                   {Array.from({ length: 5 }, (_, i) => {
-                    return i < skill.star ? <IoMdStar size={25} /> : <IoMdStarOutline size={25} />
+                    return i < skill.star ? <IoMdStar key={i} size={25} /> : <IoMdStarOutline key={i} size={25} />
                   })}
                 </div>
               </div>
               <div className='hidden md:block'>
                 <div className='flex flex-row gap-[10px]'>
-                  {skill.icons.map((icon) => <SkillIconItem size={50} icon={icon.icon} label={icon.label} />)}
+                  {skill.icons.map((icon) => <SkillIconItem key={icon.label} size={50} icon={icon.icon} label={icon.label} />)}
                 </div>
               </div>
             </div>
             <div>
-              {skill.description.map((description) => (
-                <div className='break-all'>
-                  {description.map((segment) => (
+              {skill.description.map((description, i) => (
+                <div key={i} className='break-all'>
+                  {description.map((segment, j) => (
                     segment.url
                       ? <a
+                        key={j}
                         href={segment.url}
                         target='_blank'
                         rel='noopener noreferrer'
@@ -41,7 +42,7 @@ function Skills() {
                       >
                         {segment.content}
                       </a>
-                      : <span>{segment.content}</span>
+                      : <span key={j}>{segment.content}</span>
                   ))}
                 </div>
               ))}
