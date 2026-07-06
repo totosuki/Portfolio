@@ -3,7 +3,7 @@ import type { Tab } from "../types";
 import TmuxBody from "./TmuxBody";
 import TmuxHeader from "./TmuxHeader";
 
-function Tmux() {
+function Tmux({ onDetach }: { onDetach: () => void }) {
   const [activeTab, setActiveTab] = useState<Tab>('home');
   const [prefix, setPrefix] = useState(false);
 
@@ -39,6 +39,11 @@ function Tmux() {
         e.preventDefault();
         setActiveTab('career');
       }
+      // tmuxのdetachと同じように、Ctrl+B dでターミナルを閉じる
+      else if (e.key === 'd') {
+        e.preventDefault();
+        onDetach();
+      }
       setPrefix(false);
     }
 
@@ -47,7 +52,7 @@ function Tmux() {
     }
 
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [prefix]);
+  }, [prefix, onDetach]);
 
   return (
     <div className='w-full h-[calc(100%-40px)] px-[15px] py-[10px]'>
