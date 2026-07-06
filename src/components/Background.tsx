@@ -1,5 +1,7 @@
-import { IoTerminal } from 'react-icons/io5';
+import { useState } from 'react';
+import { IoCalculator, IoTerminal } from 'react-icons/io5';
 import { SiGithub, SiX, SiYoutube } from 'react-icons/si';
+import Calculator from './Calculator';
 import DesktopIcon from './DesktopIcon';
 import bg from '../assets/background.webp';
 
@@ -8,6 +10,8 @@ function openLink(url: string) {
 }
 
 function Background({ onOpen }: { onOpen: () => void }) {
+  const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
+
   return (
     <div
       className='absolute z-0 inset-0 bg-cover bg-center bg-no-repeat'
@@ -26,7 +30,11 @@ function Background({ onOpen }: { onOpen: () => void }) {
         <DesktopIcon label='GitHub' onClick={() => openLink('https://github.com/totosuki')}>
           <SiGithub size={60} color='black' />
         </DesktopIcon>
+        <DesktopIcon label='Calculator' onClick={() => setIsCalculatorOpen(true)}>
+          <IoCalculator size={70} color='black' />
+        </DesktopIcon>
       </div>
+      { isCalculatorOpen && <Calculator onClose={() => setIsCalculatorOpen(false)} /> }
     </div>
   );
 }
