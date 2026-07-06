@@ -14,7 +14,7 @@ function AsciiTitle() {
   );
 }
 
-function AboudMe() {
+function AboutMe() {
   return (
     <div>
       <p className='text-3xl md:text-4xl mb-[20px]'>About me</p>
@@ -95,7 +95,7 @@ function Home({ setActiveTab }: Pick<TabState, 'setActiveTab'>) {
   return (
     <div className='flex flex-col px-[10px] pt-[10px] pb-[50px] md:px-[30px] md:pt-[20px] md:pb-[50px] gap-[30px]'>
       <AsciiTitle />
-      <AboudMe />
+      <AboutMe />
       <Links />
       <Pages setActiveTab={setActiveTab} />
     </div>
