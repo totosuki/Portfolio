@@ -12,6 +12,16 @@ body {
     color: white;
 }
 
+::selection {
+    background: white;
+    color: black;
+}
+
+::-moz-selection {
+    background: white;
+    color: black;
+}
+
 @keyframes marquee {
     0%   { transform: translateX(100%); }
     100% { transform: translateX(-50%); }
